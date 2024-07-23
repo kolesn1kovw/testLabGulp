@@ -1,0 +1,9 @@
+.footer {
+  padding: 2.8rem 0;
+  border-top: 1px solid var(--light-gray);
+  &__text {
+    @include text-lg-reg;
+    text-align: center;
+    color: var(--black);
+  }
+}

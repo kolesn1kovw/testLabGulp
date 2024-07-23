@@ -1,0 +1,31 @@
+<section class="feedback offset-section" id="feedback">
+  <div class="container">
+    <div class="feedback__content">
+      <h2 class="section__title feedback__title">Отправить форму</h2>
+      <form class="form" id="form">
+        <input type="hidden" name="project_name" value="testLab">
+        <input type="hidden" name="admin_email" value="kolesn1kovw@yandex.ru">
+        <input type="hidden" name="form_subject" value="testLab">
+        <div class="input-container">
+          <input id="name" name="user-name" class="form__input input" type="text" placeholder=" " />
+          <span class="invalid-text">helperText</span>
+          <img class="icon-status icon-valid" src="img/svg/valid.svg" />
+          <img class="icon-status icon-invalid" src="img/svg/invalid.svg" />
+          <label for="name" class="placeholder">Имя</label>
+        </div>
+        <div class="input-container">
+          <input id="phone" name="user-phone" class="form__input input" type="tel" placeholder=" " />
+          <span class="invalid-text">helperText</span>
+          <img class="icon-status icon-valid" src="img/svg/valid.svg" />
+          <img class="icon-status icon-invalid" src="img/svg/invalid.svg" />
+          <label for="phone" class="placeholder">Телефон</label>
+        </div>
+        <label class="custom-checkbox">
+          <input type="checkbox" name="check" class="custom-checkbox__input">
+          <span class="custom-checkbox__text">Согласен</span>
+        </label>
+        <button type="submit" class="btn-reset btn btn_primary form__button" disabled>Отправить</button>
+      </form>
+    </div>
+  </div>
+</section>

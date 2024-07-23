@@ -1,0 +1,63 @@
+.how-it-works {
+  &__title {
+    margin-bottom: 6rem;
+    text-align: center;
+
+    @include small-tablet {
+      margin-bottom: 4.2rem;
+    }
+
+    @include mobile {
+      margin-bottom: 2.6rem;
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px 34px;
+
+    @include small-tablet {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include mobile {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 32px;
+    }
+    .item {
+      @include small-tablet {
+        display: flex;
+        align-items: flex-start;
+        gap: 16px;
+      }
+      &__icon {
+        flex-shrink: 0;
+        margin-bottom: 1.6rem;
+        @include small-tablet {
+          width: 56px;
+          height: 56px;
+        }
+
+        @include mobile {
+          margin-bottom: 0;
+        }
+      }
+
+      &__title {
+        margin: 0;
+        margin-bottom: 0.4rem;
+        font-size: 1.6rem;
+        font-weight: 600;
+        line-height: 2.4rem;
+        color: var(--black);
+      }
+
+      &__description {
+        margin: 0;
+        @include text-sm-reg;
+        color: var(--dark-gray);
+      }
+    }
+  }
+}

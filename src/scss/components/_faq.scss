@@ -1,0 +1,110 @@
+.faq {
+  &__title {
+    margin-bottom: 4rem;
+    text-align: center;
+  }
+
+  .accordion-single {
+    padding: 0 10.4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    @include tablet {
+      padding: 0;
+    }
+  }
+
+  .accordion-single-item {
+    position: relative;
+    border-top: 1px solid #eceff2;
+    cursor: pointer;
+
+    .accordion-single-title {
+      margin: 0;
+      padding: 2.4rem 0;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 15px;
+      font-size: 1.8rem;
+      font-weight: 600;
+      line-height: 3.2rem;
+      color: var(--black);
+      cursor: pointer;
+      transition: color 0.25s linear;
+
+      @include mobile {
+        padding: 1.6rem 0;
+      }
+    }
+
+    .icon-state {
+      flex-shrink: 0;
+      position: relative;
+      bottom: -4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      border: 2px solid var(--black);
+      transition:
+        border-color 0.25s linear,
+        transform 0.25s linear;
+
+      .icon {
+        width: 12px;
+        height: 12px;
+      }
+    }
+
+    &:hover {
+      @media (hover: hover) {
+        .accordion-single-title {
+          color: var(--primary);
+        }
+
+        .icon-state {
+          border-color: var(--primary);
+        }
+      }
+    }
+  }
+
+  .accordion-single-content {
+    display: grid;
+    grid-template-rows: 0fr;
+    overflow: hidden;
+    transition: grid-template-rows 350ms linear;
+    div {
+      overflow: hidden;
+    }
+  }
+
+  .accordion-single-content p {
+    @include text-lg-reg;
+    margin-bottom: 2.4rem;
+    color: var(--dark-gray);
+
+    @include mobile {
+      margin-bottom: 1.6rem;
+      font-size: 1.6rem;
+      line-height: 2.8rem;
+    }
+  }
+
+  .accordion-single-item.is-open .accordion-single-content {
+    grid-template-rows: 1fr;
+  }
+
+  .accordion-single-item.is-open {
+    .accordion-single-title {
+      color: var(--primary);
+    }
+    .icon-state {
+      border-color: var(--primary);
+      transform: rotate(45deg);
+    }
+  }
+}

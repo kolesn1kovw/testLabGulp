@@ -1,0 +1,40 @@
+.answers {
+  padding: 6.8rem 0;
+  background-color: var(--extra-light-gray);
+
+  @include mobile {
+    padding: 2rem 0;
+  }
+
+  @include small-mobile {
+    padding: 1.6rem 0;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 37px 32px;
+
+    @include small-tablet {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    @include mobile {
+      gap: 20px 0;
+    }
+    .answer {
+      &__title {
+        @include text-lg-bold;
+        margin-bottom: 1.7rem;
+
+        @include mobile {
+          margin-bottom: 1.4rem;
+        }
+      }
+
+      &__description {
+        @include text-base-reg;
+      }
+    }
+  }
+}

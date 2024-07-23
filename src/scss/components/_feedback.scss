@@ -1,0 +1,10 @@
+.feedback {
+  &__title {
+    margin-bottom: 4.4rem;
+    text-align: center;
+
+    @include small-tablet {
+      margin-bottom: 3rem;
+    }
+  }
+}
